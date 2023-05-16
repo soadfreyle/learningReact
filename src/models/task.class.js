@@ -4,7 +4,7 @@ export class Task {
   name = "";
   descripcion = "";
   completed = false;
-  level = LEVELS.NORMAL;
+  level = LEVELS.BLOCKING;
 
   constructor(name, descripcion, completed, level) {
     this.name = name;

@@ -2,28 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Task } from '../../models/task.class'
 
-const taskComponent = ({ task }) => {
+function TaskComponent ({ task }) {
   return (
     <div>
        <h2>
         Nombre: { task.name }
        </h2> 
        <h3>
-        Descripcion: { task.descripcion }
+        Descripcion: { task.description }
        </h3>
        <h4>
         Level: { task.level}
        </h4>
        <h5>
-        This task is: { task.descripcion ? 'COMPLETED':'PENDING'}
+        This task is: { task.completed ? 'COMPLETED':'PENDING'}
        </h5>
 
     </div>
   )
 }
 
-taskComponent.propTypes = {
+TaskComponent.propTypes = {
     task : PropTypes.instanceOf(Task)
 }
 
-export default taskComponent
+export default TaskComponent
